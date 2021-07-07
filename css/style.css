@@ -1,0 +1,16 @@
+*{
+	padding: 0;
+	margin: 0;
+	/*overflow: hidden;*/
+}
+
+body {
+	background: url("../img/fondo.jpg") no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+h1 {
+	position: center;
+}
