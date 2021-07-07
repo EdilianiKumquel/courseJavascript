@@ -1,13 +1,11 @@
 let count = 0;
 
-var bonusPoints = 50;
+function increment() {
+	count = count + 1;
+	document.getElementById("count-el").innerText = count;
+}
 
-bonusPoints = bonusPoints + 50;
-console.log(bonusPoints);
-bonusPoints = bonusPoints - 75;
-console.log(bonusPoints);
-bonusPoints = bonusPoints + 45;
-console.log(bonusPoints);
-
-// section 1: build a passenger counter app
-// lesson 8 the onclick event listener 21:40 minutes
+function reset() {
+	count = 0;
+	document.getElementById('count-el').innerText = count;
+}
