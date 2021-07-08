@@ -1,39 +1,78 @@
 *{
 	padding: 0;
 	margin: 0;
-	/*overflow: hidden;*/
 }
 
 body {
+	background-color: #D0D3C5;
+}
+
+header {
+	background-color:#56B1BF;
+	height: 200px;
+}
+
+header h1 {
+	display: block;
+	position: absolute;
+	top: 90px;
+	bottom: 90px;
+	left: 40%;
+	right: 40%;
+	color: white;
+}
+
+nav {
+	background-color: #08708A;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+nav li {
+	display: inline-block;
+	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 12px;
+}
+/* ------------ SECTION 1 -------------------- */
+#section1 {
 	background: url("../img/fondo.jpg") no-repeat;
 	background-size: cover;
 	background-position: center center;
-	background-attachment: fixed;
+	height: 600px;
+	text-align: center;
+}
+#section1 h1 {
+	padding-top: 50px;
 }
 
-.container {
+#section1 .container {
 	background: rgba(255, 162, 51, 0.6);
 	width: 30%;
 	height: 300px;
 	position: relative;
 	left: 35%;
 	right: 35%;
-	top: 300px;
+	top: 100px;
 	border-radius: 10px;
 }
 
-.container h1, h2{
+
+#section1 .container h1, h2{
 	display: block;
 	text-align: center;
 	font-weight: bold;
 	padding: 10px;
 }
 
-.container h2 {
+#section1 .container h2 {
 	font-size: 30px;
 }
 
-.container button {
+#section1 .container button {
 	border: none;
 	padding: 10px;
 	width: 200px;
@@ -44,19 +83,56 @@ body {
 	left: 90px;
 }
 
-.container #increment-btn {
+#section1 .container #increment-btn {
 	top: 140px;
 }
-.container #reset-btn {
+
+#section1 .container #save-btn {
 	top: 180px;
 }
 
-.container #save-btn {
+#section1 .container h3 {
+	display: block;
+	position: absolute;
 	top: 220px;
 }
 
-.container h3 {
-	display: block;
-	position: absolute;
-	top: 260px;
+/* ------------------------------------------------------ */
+
+/* -------- SECTION 2 ----------------------------------*/ 
+
+#section2 {
+	height: 600px;
+}
+
+/* ------------------------------------------------------ */
+
+/* -------- SECTION 3 ----------------------------------*/ 
+
+#section3 {
+	height: 600px;
+}
+
+/* ------------------------------------------------------ */
+
+/* -------- SECTION 4 ----------------------------------*/ 
+
+#section4 {
+	height: 600px;
+}
+
+/* ------------------------------------------------------ */
+
+/* -------- SECTION 5 ----------------------------------*/ 
+
+#section5 {
+	height: 600px;
+}
+
+/*-----------------------------------------------------*/
+
+/*-------------- FOOTER ------------------------------*/
+
+footer {
+	height: 200px;
 }
