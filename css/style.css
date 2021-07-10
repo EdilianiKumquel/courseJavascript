@@ -103,6 +103,41 @@ nav li {
 
 #section2 {
 	height: 600px;
+	border: solid;
+	border-color: pink;
+}
+
+#section2 img {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: 100px;
+	left: 450px;
+	right: 450px;
+}
+
+#section2 h1 {
+	display: block;
+	position: relative;
+	top: 150px;
+	left: 500px;
+	right: 500px;
+}
+
+#section2 button {
+	display: block;
+	position: relative;
+	top: 170px;
+	left: 500px;
+	right: 500px;
+}
+
+#section2 #error {
+	position: relative;
+	top: 190px;
+	left: 500px;
+	right: 500px;
+	color: red;
 }
 
 /* ------------------------------------------------------ */
