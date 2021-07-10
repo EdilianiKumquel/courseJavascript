@@ -50,23 +50,32 @@ function multiply(){
 
 // section 3 building a blackjack game.
 
-let firstCard = 11;
+ 
+let firstCard = 3;
 let secondCard = 11;
 let sum = firstCard + secondCard;
-let age = 20;
+let messageThird = "";
+//let messageEl = document.getElementById("message-el"); 
+let messageEl = document.querySelector("#message-el"); 
 
-if (sum < 21){
-	console.log("Do you want to draw a new card?");
-} else if (sum === 21) {
-	console.log("wohooo! You've got blackjack!");
-} else {
-	console.log("You're out of the game!");
+
+function startGame(){
+
+	document.getElementById("cards").innerText = "Cards: " + firstCard + "," + secondCard;
+	document.getElementById("sum").innerText = "Sum: " + sum;
+
+	if (sum <= 20){
+		messageThird = "Do you want to draw a new card?";
+		messageEl.innerText = messageThird;
+	} else if (sum === 21) {
+		messageThird = "wohooo! You've got blackjack!";
+		messageEl.innerText = messageThird;
+	} else {
+		messageThird = "You're out of the game!";
+		messageEl.innerText = messageThird;
+	}
+
 }
 
-if (age < 21) {
-	console.log("You can not enter the club!");
-} else {
-	console.log("Welcome to the jungle");
-}
-
-//
+//section 3: building a blackjack game lesson 17 New Card button 
+// 2:21:32

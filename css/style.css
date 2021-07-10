@@ -165,7 +165,31 @@ nav li {
 
 #section4 {
 	height: 600px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background-color: rgba(0, 143, 57, 0.5);
+	text-align: center;
+	color: white;
 }
+
+#section4 h1 {
+	color: goldenrod;
+}
+
+#section4 #message-el {
+	font-style: italic;
+}
+
+#section4 button {
+	color: #016f32;
+	width: 150px;
+	background-color: goldenrod;
+	margin: 5px;
+	padding: 5px;
+	font-weight: bold; 
+	border:none;
+	border-radius: 5px;
+}
+
 
 /* ------------------------------------------------------ */
 
