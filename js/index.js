@@ -47,3 +47,26 @@ function divide(){
 function multiply(){
 	total.textContent = msuma + (num1 * num2);
 }
+
+// section 3 building a blackjack game.
+
+let firstCard = 11;
+let secondCard = 11;
+let sum = firstCard + secondCard;
+let age = 20;
+
+if (sum < 21){
+	console.log("Do you want to draw a new card?");
+} else if (sum === 21) {
+	console.log("wohooo! You've got blackjack!");
+} else {
+	console.log("You're out of the game!");
+}
+
+if (age < 21) {
+	console.log("You can not enter the club!");
+} else {
+	console.log("Welcome to the jungle");
+}
+
+//
