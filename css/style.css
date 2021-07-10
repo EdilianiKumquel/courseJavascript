@@ -100,6 +100,13 @@ nav li {
 /* ------------------------------------------------------ */
 
 /* -------- SECTION 2 ----------------------------------*/ 
+#section2 .section21 {
+	width: 500px;
+	height: 600px;
+	position: relative;
+	border: solid;
+	border-color: red;
+}
 
 #section2 {
 	height: 600px;
@@ -110,33 +117,29 @@ nav li {
 #section2 img {
 	width: 300px;
 	height: 300px;
-	position: relative;
+	position: absolute;
 	top: 100px;
-	left: 450px;
-	right: 450px;
+	left: 100px;
 }
 
 #section2 h1 {
 	display: block;
-	position: relative;
-	top: 150px;
-	left: 500px;
-	right: 500px;
+	position: absolute;
+	top: 400px;
+	left: 100px;
 }
 
 #section2 button {
 	display: block;
 	position: relative;
-	top: 170px;
-	left: 500px;
-	right: 500px;
+	top: 450px;
+	left: 100px;
 }
 
 #section2 #error {
 	position: relative;
-	top: 190px;
-	left: 500px;
-	right: 500px;
+	top: 470px;
+	left: 100px;
 	color: red;
 }
 
@@ -146,6 +149,14 @@ nav li {
 
 #section3 {
 	height: 600px;
+}
+
+#section3 span {
+	display: inline-block;
+}
+
+#section3 ul li {
+	display: inline-block;
 }
 
 /* ------------------------------------------------------ */
