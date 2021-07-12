@@ -51,18 +51,23 @@ function multiply(){
 // section 3 building a blackjack game.
 
  
-let firstCard = 3;
-let secondCard = 11;
+let firstCard = 9;
+let secondCard = 2;
 let sum = firstCard + secondCard;
 let messageThird = "";
 //let messageEl = document.getElementById("message-el"); 
 let messageEl = document.querySelector("#message-el"); 
-
+let cardsEl = document.getElementById("cards");
+let sumEl = document.getElementById("sum");
 
 function startGame(){
+	cardsEl.innerText = "Cards: " + firstCard + "," + secondCard;
+	renderGame();
+}
 
-	document.getElementById("cards").innerText = "Cards: " + firstCard + "," + secondCard;
-	document.getElementById("sum").innerText = "Sum: " + sum;
+function renderGame(){
+
+	sumEl.innerText = "Sum: " + sum;
 
 	if (sum <= 20){
 		messageThird = "Do you want to draw a new card?";
@@ -76,6 +81,10 @@ function startGame(){
 	}
 
 }
-
-//section 3: building a blackjack game lesson 17 New Card button 
-// 2:21:32
+ 
+function newCard() {
+	let card = 5;
+	sum += card;
+	cardsEl.innerText = cardsEl.innerText + "," + card;
+	renderGame();
+}
