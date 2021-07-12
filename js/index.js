@@ -53,6 +53,7 @@ function multiply(){
  
 let firstCard = 9;
 let secondCard = 2;
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let messageThird = "";
 //let messageEl = document.getElementById("message-el"); 
@@ -61,7 +62,7 @@ let cardsEl = document.getElementById("cards");
 let sumEl = document.getElementById("sum");
 
 function startGame(){
-	cardsEl.innerText = "Cards: " + firstCard + "," + secondCard;
+	cardsEl.innerText = "Cards: " + cards[0] + "," + cards[1];
 	renderGame();
 }
 
@@ -85,6 +86,11 @@ function renderGame(){
 function newCard() {
 	let card = 5;
 	sum += card;
+	cards.push(card);
 	cardsEl.innerText = cardsEl.innerText + "," + card;
 	renderGame();
 }
+
+// section 3: Building a BlackJack game 
+//Lesson 27: Countin in JavaScript
+// 2:53:04
