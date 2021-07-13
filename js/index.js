@@ -62,11 +62,15 @@ let cardsEl = document.getElementById("cards");
 let sumEl = document.getElementById("sum");
 
 function startGame(){
-	cardsEl.innerText = "Cards: " + cards[0] + "," + cards[1];
 	renderGame();
 }
 
 function renderGame(){
+
+	cardsEl.textContent = "Cards: ";
+	for (let i = 0; i < cards.length; i++) {
+		cardsEl.textContent += cards[i] + ", ";
+	}
 
 	sumEl.innerText = "Sum: " + sum;
 
@@ -87,10 +91,15 @@ function newCard() {
 	let card = 5;
 	sum += card;
 	cards.push(card);
-	cardsEl.innerText = cardsEl.innerText + "," + card;
 	renderGame();
 }
 
-// section 3: Building a BlackJack game 
-//Lesson 27: Countin in JavaScript
-// 2:53:04
+
+
+
+let sentence = ["Hello ", "my ", "name ", "is ", "Ediliani "];
+let greetingEl = document.querySelector("#greeting-el");
+
+for ( let i = 0; i < sentence.length; i++){
+	greetingEl.textContent += sentence[i];
+}
