@@ -51,8 +51,8 @@ function multiply(){
 // section 3 building a blackjack game.
 
  
-let firstCard = 9;
-let secondCard = 2;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let messageThird = "";
@@ -63,6 +63,11 @@ let sumEl = document.getElementById("sum");
 
 function startGame(){
 	renderGame();
+}
+
+function getRandomCard(){
+	let cardRandom = Math.floor(Math.random()*13) + 1;
+	return cardRandom;
 }
 
 function renderGame(){
@@ -88,18 +93,9 @@ function renderGame(){
 }
  
 function newCard() {
-	let card = 5;
+	let card = getRandomCard();
 	sum += card;
 	cards.push(card);
 	renderGame();
 }
 
-
-
-
-let sentence = ["Hello ", "my ", "name ", "is ", "Ediliani "];
-let greetingEl = document.querySelector("#greeting-el");
-
-for ( let i = 0; i < sentence.length; i++){
-	greetingEl.textContent += sentence[i];
-}
