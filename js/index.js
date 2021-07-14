@@ -67,7 +67,14 @@ function startGame(){
 
 function getRandomCard(){
 	let cardRandom = Math.floor(Math.random()*13) + 1;
-	return cardRandom;
+	console.log(cardRandom);
+	if (cardRandom === 11 || cardRandom === 12 || cardRandom === 13){
+		return 10;
+	} else if (cardRandom === 1){
+		return 11;
+	} else {
+		return cardRandom;
+	}
 }
 
 function renderGame(){
@@ -99,3 +106,6 @@ function newCard() {
 	renderGame();
 }
 
+// section 3: building a Blackjack game
+// lesson 43: Assing values in the startGame function
+//3:39:06
