@@ -50,18 +50,23 @@ function multiply(){
 
 // section 3 building a blackjack game.
 
- 
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+
+let cards = [];
+let sum = 0;
+let isAlive = false;
 let messageThird = "";
+let hasBlackJack = false;
 //let messageEl = document.getElementById("message-el"); 
 let messageEl = document.querySelector("#message-el"); 
 let cardsEl = document.getElementById("cards");
 let sumEl = document.getElementById("sum");
 
 function startGame(){
+	isAlive = true;
+	for (let i = 0; i<2; i++){
+		cards.push(getRandomCard());
+		sum += cards[i];
+	}
 	renderGame();
 }
 
@@ -92,20 +97,24 @@ function renderGame(){
 	} else if (sum === 21) {
 		messageThird = "wohooo! You've got blackjack!";
 		messageEl.innerText = messageThird;
+		hasBlackJack = true;
 	} else {
 		messageThird = "You're out of the game!";
 		messageEl.innerText = messageThird;
+		isAlive = false;
 	}
 
 }
  
 function newCard() {
-	let card = getRandomCard();
-	sum += card;
-	cards.push(card);
-	renderGame();
+	if (isAlive === true && hasBlackJack === false) {
+		let card = getRandomCard();
+		sum += card;
+		cards.push(card);
+		renderGame();
+	} else {
+		messageEl.textContent = "you do not start the game still";
+	}
+
 }
 
-// section 3: building a Blackjack game
-// lesson 43: Assing values in the startGame function
-//3:39:06
