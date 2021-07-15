@@ -50,18 +50,31 @@ function multiply(){
 
 // section 3 building a blackjack game.
 
-
+//array
 let cards = [];
 let sum = 0;
 let isAlive = false;
 let messageThird = "";
 let hasBlackJack = false;
-//let messageEl = document.getElementById("message-el"); 
+let endGame = false;
+let playerEl = document.getElementById("player-el"); 
 let messageEl = document.querySelector("#message-el"); 
 let cardsEl = document.getElementById("cards");
 let sumEl = document.getElementById("sum");
 
+//object
+let player = {
+	name: "Ediliani",
+	chips: 200
+}
+
+playerEl.textContent = player.name + ": $" + player.chips;
+
 function startGame(){
+	if (endGame === true) {
+		cards = [];
+		sum = 0;
+	}
 	isAlive = true;
 	for (let i = 0; i<2; i++){
 		cards.push(getRandomCard());
@@ -98,11 +111,14 @@ function renderGame(){
 		messageThird = "wohooo! You've got blackjack!";
 		messageEl.innerText = messageThird;
 		hasBlackJack = true;
+		endGame = true;
 	} else {
 		messageThird = "You're out of the game!";
 		messageEl.innerText = messageThird;
 		isAlive = false;
+		endGame = true;
 	}
+
 
 }
  
@@ -112,9 +128,14 @@ function newCard() {
 		sum += card;
 		cards.push(card);
 		renderGame();
-	} else {
+	} else if (isAlive === false && endGame === false) {
 		messageEl.textContent = "you do not start the game still";
 	}
 
 }
 
+
+
+// section 4: practice time
+// lesson 1: Objects and functions
+// 4:15:17 
