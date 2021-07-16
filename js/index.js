@@ -202,3 +202,24 @@ function randomhands(){
 }
 
 console.log(randomhands());
+
+//sorting fruits
+let fruit = ["apple", "orange", "apple", "apple", "orange"];
+let appleShelf = document.getElementById("apple-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
+
+function putsFruit() {
+	for (let i = 0; i < fruit.length; i++){
+		if (fruit[i] === "apple"){
+			appleShelf.textContent += fruit[i] + ","
+		} else {
+			orangeShelf.textContent += fruit[i] + ","
+		}
+	}	
+}
+
+putsFruit();
+
+//section 5: building a Chrome Extension
+//lesson 1: Let's buil a Chrome Extension
+//4:33:53 
