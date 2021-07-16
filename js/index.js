@@ -134,8 +134,71 @@ function newCard() {
 
 }
 
-
-
 // section 4: practice time
-// lesson 1: Objects and functions
-// 4:15:17 
+
+//objects and functions
+let person = {
+	name: "Ediliani" ,
+	age: "23" ,
+	country: "Venezuela"
+}
+
+function logData(){
+	let message4 = person.name + " is " + person.age + " years old and live in " + person.country;
+	console.log(message4);
+}	
+
+logData();
+
+//conditionals 
+let age = 27;
+
+if (age < 6) {
+	console.log("It's free");
+} else if (age < 18 ) {
+	console.log("child discount");
+} else if (age < 27 ) {
+	console.log("student discount");
+} else if (age < 67) {
+	console.log("full price");
+} else {
+	console.log("senior citizen discount");
+}
+
+//loops
+let largeCountries = ["Tuvalu", "India", "USA", "Indonesia","Monaco"];
+
+console.log("The 5 largest countries in the world");
+for (let i = 0; i < largeCountries.length; i++) {
+	console.log("- " + largeCountries[i]);
+}
+
+//push, pop, unshift, shift
+
+largeCountries.shift();
+largeCountries.unshift("China");
+largeCountries.pop();
+largeCountries.push("Pakistan");
+
+console.log(largeCountries);
+
+//logical operators
+let dayOfMonth = 13;
+let weekday = "Monday";
+
+if (dayOfMonth === 13 && weekday === "Friday") {
+	console.log("It's Friday the 13th, SCARY");
+} else {
+	console.log("any day")
+}
+
+// rock paper scissor game 
+
+let gethand = ["rock", "paper", "scissor"];
+
+function randomhands(){
+	let numrandom = Math.floor(Math.random()*3); 
+	return gethand[numrandom];
+}
+
+console.log(randomhands());
