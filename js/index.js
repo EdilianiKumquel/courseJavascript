@@ -220,6 +220,33 @@ function putsFruit() {
 
 putsFruit();
 
+//section 5
+let myLeads = ["Ediliani", "Ediliani", "Ediliani"];
+const inputEl = document.getElementById("input-el");
+const inputBtn = document.getElementById("input-btn");
+const ulEl = document.getElementById("ul-el");
+
+
+inputBtn.addEventListener("click", function() {
+	myLeads.push(inputEl.value);
+	console.log(myLeads);
+});
+
+for (let i = 0; i < myLeads.length; i++){
+	ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
+	console.log(ulEl);
+}
+
+
+
+
+
+let openBox = document.getElementById("box");
+
+openBox.addEventListener("click", function() {
+	console.log("I want to open the box!")
+});
+
 //section 5: building a Chrome Extension
-//lesson 1: Let's buil a Chrome Extension
-//4:33:53 
+//lesson 16: write your first innerHTML
+//5:12:59

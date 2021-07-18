@@ -3,7 +3,7 @@
 *{
 	padding: 0;
 	margin: 0;
-	text-decoration: none;
+	/*text-decoration: none;*/
 	font-family:  'Noto Sans', sans-serif;
 }
 
@@ -219,6 +219,38 @@ nav li a {
 
 /*-----------------------------------------------------*/
 
+#section6 {
+	height: 600px;
+	padding: 10px;
+}
+
+#section6 input {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #5f9341;
+}
+
+#section6 button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #5f9341;
+	border: none;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+#section6 #box {
+	cursor: pointer;
+	background: lightseagreen;
+	padding: 40px;
+	width: 200px;
+	text-align: center;
+	margin: 20px auto;
+	color: white;
+	font-weight: bold;
+}
 /*-------------- FOOTER ------------------------------*/
 
 footer {
