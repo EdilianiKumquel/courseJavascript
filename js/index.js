@@ -221,7 +221,7 @@ function putsFruit() {
 putsFruit();
 
 //section 5
-let myLeads = ["Ediliani", "Ediliani", "Ediliani"];
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
@@ -229,15 +229,22 @@ const ulEl = document.getElementById("ul-el");
 
 inputBtn.addEventListener("click", function() {
 	myLeads.push(inputEl.value);
-	console.log(myLeads);
+	inputEl.value = "";
+	renderLeads();
 });
 
-for (let i = 0; i < myLeads.length; i++){
-	ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
-	console.log(ulEl);
+function renderLeads(){
+	let listItem = "";
+	for (let i = 0; i < myLeads.length; i++){
+		listItem += `
+		<li>
+			<a target='_black' href='${myLeads[i]}'>
+				${myLeads[i]}
+			</a>
+		</i>`
+	}
+	ulEl.innerHTML = listItem;
 }
-
-
 
 
 
@@ -247,6 +254,23 @@ openBox.addEventListener("click", function() {
 	console.log("I want to open the box!")
 });
 
-//section 5: building a Chrome Extension
-//lesson 16: write your first innerHTML
-//5:12:59
+const container = document.getElementById("container");
+
+container.innerHTML = "<button> Buy! </button>";
+container.addEventListener("click", function(){
+	container.innerHTML += "<p>Thank you for buying!</p>";
+})
+
+//practice temple strings
+
+const recipient = "Ediliani";
+const sender = "James";
+const email = `Hey ${recipient}!
+ How is it going? 
+ Cheers ${sender}`;
+
+console.log(email);
+
+//section 5: building a chrome Extension
+//lesson 32: what is localStorage
+//5:53:39
