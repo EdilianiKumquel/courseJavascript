@@ -235,10 +235,16 @@ nav li a {
 	margin-top: 10px;
 	padding: 10px 20px;
 	background-color: #5f9341;
-	border: none;
 	color: white;
 	font-weight: bold;
+	border:1px solid white;
 	border-radius: 5px;
+}
+
+#section6 #delete-btn {
+	background-color: white;
+	color: #5f9341;
+	border:1px solid #5f9341;
 }
 
 #section6 #box {

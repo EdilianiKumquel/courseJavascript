@@ -224,27 +224,45 @@ putsFruit();
 let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
+const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el");
 
 
-inputBtn.addEventListener("click", function() {
-	myLeads.push(inputEl.value);
-	inputEl.value = "";
-	renderLeads();
-});
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
-function renderLeads(){
+if (leadsFromLocalStorage){
+	myLeads = leadsFromLocalStorage
+	render(myLeads);
+} 
+
+function render(leads){
 	let listItem = "";
-	for (let i = 0; i < myLeads.length; i++){
+	for (let i = 0; i < leads.length; i++){
 		listItem += `
 		<li>
-			<a target='_black' href='${myLeads[i]}'>
-				${myLeads[i]}
+			<a target='_black' href='${leads[i]}'>
+				${leads[i]}
 			</a>
 		</i>`
 	}
 	ulEl.innerHTML = listItem;
 }
+
+
+deleteBtn.addEventListener("dblclick", function(){
+	localStorage.clear()
+	myLeads = [];
+	render(myLeads);
+})
+
+
+inputBtn.addEventListener("click", function() {
+	myLeads.push(inputEl.value);
+	inputEl.value = "";
+	localStorage.setItem("myLeads", JSON.stringify(myLeads))
+	render(myLeads);
+	console.log(localStorage.getItem("myLeads"))
+});
 
 
 
@@ -271,6 +289,12 @@ const email = `Hey ${recipient}!
 
 console.log(email);
 
-//section 5: building a chrome Extension
-//lesson 32: what is localStorage
-//5:53:39
+const welcomeEl = document.getElementById("welcome-el")
+let user = "Ediliani Kumquel Coromoto"
+let greeting = "Hey there!"
+
+function greetUser(name,greet){
+	welcomeEl.textContent = `${greet}, ${name}`
+}
+
+greetUser(user, greeting)
