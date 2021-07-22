@@ -226,14 +226,26 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el");
-
-
+const tabBtn = document.getElementById("tab-btn")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
+const tabs = [
+	{url:"https://ve.linkedin.com/"}
+]
 
 if (leadsFromLocalStorage){
 	myLeads = leadsFromLocalStorage
 	render(myLeads);
 } 
+
+tabBtn.addEventListener("click", function(){
+	//console.log(tabs[0].url)
+	//chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+		myLeads.push(tabs[0].url)
+		localStorage.setItem("myLeads", JSON.stringify(myLeads))
+		render(myLeads)
+	//})
+})
 
 function render(leads){
 	let listItem = "";
@@ -298,3 +310,13 @@ function greetUser(name,greet){
 }
 
 greetUser(user, greeting)
+
+
+//6:53:50
+let arr = ["Ediliani", "Kumquel"]
+
+function getFirst(arr){
+	return arr[0];
+}
+
+console.log(getFirst(arr))
