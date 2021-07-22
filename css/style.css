@@ -271,6 +271,32 @@ nav li a {
 #section6 a {
 	color: #5f9341;
 }
+
+/*section 7 */
+
+#section7 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: whitesmoke;
+	text-align:  center;
+	color: #130e0f;
+}
+
+#section7 h1 {
+	font-weight: 200px;
+	letter-spacing: 2px;
+	cursor:pointer;
+}
+
+#section7 #container-animal {
+	width: 100%;
+	display:none;
+}
+
+.team-img {
+	width: 100px;
+	border-radius:  100%;
+	margin: 10px;
+}
 /*-------------- FOOTER ------------------------------*/
 
 footer {

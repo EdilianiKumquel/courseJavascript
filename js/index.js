@@ -255,7 +255,7 @@ function render(leads){
 			<a target='_black' href='${leads[i]}'>
 				${leads[i]}
 			</a>
-		</i>`
+		</li>`
 	}
 	ulEl.innerHTML = listItem;
 }
@@ -311,8 +311,6 @@ function greetUser(name,greet){
 
 greetUser(user, greeting)
 
-
-//6:53:50
 let arr = ["Ediliani", "Kumquel"]
 
 function getFirst(arr){
@@ -320,3 +318,98 @@ function getFirst(arr){
 }
 
 console.log(getFirst(arr))
+
+
+//section 6
+//exercise 1
+const player1 = "Ediliani"
+const opponent = "Herminia"
+const game = "AmazingFighter"
+let points = 0
+let hasWon = false
+
+points += 100
+hasWon = true
+
+if (hasWon){
+	console.log(`${player1} got ${points} points and won the ${game} game!`)
+} else {
+	console.log(`The winner is ${opponent}! ${player} lost the game`)
+}
+
+//exercise 2
+
+let myCourses = ["Learn CSS Animations", "UI Design Fundamentals", "Intro to Clean Code"]
+
+function logItems(arr){
+	for (let i = 0; i < arr.length; i++){
+		console.log(arr[i])
+	}
+}
+
+logItems(myCourses)
+
+//exercise 3
+//save a value to localStorage
+//delete your code and refresh the page
+//Fetch your value from localStorage and log it out
+
+console.log (localStorage.getItem('value'))
+
+//exercise 4
+let data = [
+	{
+		player:"Jane",
+		score: 52
+	},
+	{
+		player:"Mark",
+		score: 41
+	}
+
+]
+
+const scoreBtn = document.getElementById("score-btn")
+let scoreValue = document.getElementById("score-value")
+
+scoreBtn.addEventListener("click", function(){
+	scoreValue.innerHTML = `Jane's score is ${data[0].score}`
+})
+
+// exercise 5
+let description = "largest countries"
+let arrayCountry = ["China", "India", "USA"]
+let arrayFruit = ["Apples", "Bananas"]
+
+function generateSentence(desc, arr){
+	let answer = `The ${arr.length} ${desc} are `;
+	let lastIndex = arr.length - 1
+	for (let i = 0; i < arr.length; i++){
+		if (i === lastIndex){
+			answer += arr[i]
+		} else {
+			answer += arr[i] + ", "
+		}
+	}
+	return answer
+}
+
+console.log(generateSentence(description, arrayCountry))
+
+//execise 6 
+let container2 = document.getElementById("container2");
+
+const imgs = [ 
+	"./img/hip1.jpg", 
+	"./img/hip2.jpg",
+	"./img/hip3.jpg"
+]
+function renderImagenes(){
+	let imagenes = "";
+	for(let i = 0; i < imgs.length; i++){
+		imagenes += `<img alt="type of animals" src="${imgs[i]}" class="team-img">`
+	}
+	container2.innerHTML = imagenes;
+}
+
+renderImagenes()
